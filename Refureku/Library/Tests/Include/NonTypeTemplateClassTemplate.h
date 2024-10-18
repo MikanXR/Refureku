@@ -21,13 +21,6 @@ class CLASS() SingleNonTypeTemplateClassTemplate
 	SingleNonTypeTemplateClassTemplate_GENERATED
 };
 
-//On MSVC, we must define the base getArchetype method for this since the variadic version is not recognized correctly
-#if !RFK_TEMPLATE_TEMPLATE_SUPPORT
-
-RFK_DEFINE_GET_ARCHETYPE_TEMPLATE(TestEnumClass, std::size_t)
-
-#endif
-
 template <TestEnumClass EnumClass, std::size_t Size>
 class CLASS() MultipleNonTypeTemplateClassTemplate
 {
